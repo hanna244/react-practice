@@ -1,12 +1,13 @@
-import logo from './logo.svg';
 import './App.css';
 
 import { Normal } from './page/normal/Normal';
+import { UseGridLayout } from './page/useGridLayout/UseGridLayout';
 
 function App() {
   return (
     <div>
-      <Normal />
+      {/* <Normal /> */}
+      <UseGridLayout />
     </div>
   );
 }
