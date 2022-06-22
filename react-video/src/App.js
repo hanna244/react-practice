@@ -1,42 +1,46 @@
 import React from 'react';
-import videojs from 'video.js';
-// This imports the functional component from the previous sample.
-import VideoJS from './VideoJS';
+
+import { Player } from 'react-tuby';
+import 'react-tuby/css/main.css';
 
 const App = () => {
-  const playerRef = React.useRef(null);
-
-  const videoJsOptions = {
-    autoplay: true,
-    controls: true,
-    responsive: true,
-    fluid: true,
-    sources: [
-      {
-        src: 'https://file-examples.com/storage/fe88505b6162b2538a045ce/2017/04/file_example_MP4_480_1_5MG.mp4',
-        type: 'https://file-examples.com/storage/fe88505b6162b2538a045ce/2017/04/file_example_MP4_480_1_5MG.mp4',
-      },
-    ],
-  };
-
-  const handlePlayerReady = (player) => {
-    playerRef.current = player;
-
-    // You can handle player events here, for example:
-    player.on('waiting', () => {
-      videojs.log('player is waiting');
-    });
-
-    player.on('dispose', () => {
-      videojs.log('player will dispose');
-    });
-  };
-
   return (
     <>
-      <div>Rest of app here</div>
-      <VideoJS options={videoJsOptions} onReady={handlePlayerReady} />
-      <div>Rest of app here</div>
+      <Player
+        src={
+          'https://cdn.glitch.me/cbf2cfb4-aa52-4a1f-a73c-461eef3d38e8/1080.mp4'
+        }
+        // src={
+        // [
+        // {
+        //   quality: 'Full HD',
+        //   url: 'https://cdn.glitch.me/cbf2cfb4-aa52-4a1f-a73c-461eef3d38e8/1080.mp4',
+        // },
+        // {
+        //   quality: 720,
+        //   url: 'https://cdn.glitch.me/cbf2cfb4-aa52-4a1f-a73c-461eef3d38e8/720.mp4',
+        // },
+        // {
+        //   quality: 480,
+        //   url: 'https://cdn.glitch.me/cbf2cfb4-aa52-4a1f-a73c-461eef3d38e8/480.mp4',
+        // },
+        //   ]
+        // }
+        // subtitles={[
+        //   {
+        //     lang: 'en',
+        //     language: 'English',
+        //     url: 'https://cdn.jsdelivr.net/gh/naptestdev/video-examples@master/en.vtt',
+        //   },
+        //   {
+        //     lang: 'fr',
+        //     language: 'French',
+        //     url: 'https://cdn.jsdelivr.net/gh/naptestdev/video-examples@master/fr.vtt',
+        //   },
+        // ]}
+        poster='https://cdn.jsdelivr.net/gh/naptestdev/video-examples@master/poster.png'
+        primaryColor='#0F52FF'
+      />
     </>
   );
 };
