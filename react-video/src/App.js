@@ -1,6 +1,5 @@
 import React from 'react';
 import videojs from 'video.js';
-
 // This imports the functional component from the previous sample.
 import VideoJS from './VideoJS';
 
@@ -14,8 +13,8 @@ const App = () => {
     fluid: true,
     sources: [
       {
-        src: '/path/to/video.mp4',
-        type: 'video/mp4',
+        src: 'https://file-examples.com/storage/fe88505b6162b2538a045ce/2017/04/file_example_MP4_480_1_5MG.mp4',
+        type: 'https://file-examples.com/storage/fe88505b6162b2538a045ce/2017/04/file_example_MP4_480_1_5MG.mp4',
       },
     ],
   };
