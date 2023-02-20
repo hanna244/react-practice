@@ -4,15 +4,17 @@ function App() {
   return (
     <>
       <div className="App">
-        <section class="plan_container">
-          <p class="plan_subHeadline">자막 소스와 언어만 선택하면 끝</p>
-          <h1 class="plan_title">자막 구독 플랜 맞춤 구성하기</h1>
-          <p class="plan_emph">모든 구독 플랜의 기본 제공 시간은 월 60분 ⏱️</p>
-          <div class="plan_process">
-            <h2 class="a11y">구독 플랜 구성 순서</h2>
-            <article class="group_process first">
+        <section className="plan_container">
+          <p className="plan_subHeadline">자막 소스와 언어만 선택하면 끝</p>
+          <h1 className="plan_title">자막 구독 플랜 맞춤 구성하기</h1>
+          <p className="plan_emph">
+            모든 구독 플랜의 기본 제공 시간은 월 60분 ⏱️
+          </p>
+          <div className="plan_process">
+            <h2 className="a11y">구독 플랜 구성 순서</h2>
+            <article className="group_process first">
               <h3>1. 영상 자막 소스 선택</h3>
-              <span class=""></span>
+              <span className=""></span>
               <div>
                 <div>
                   <label for="sourceVoice">음성</label>
@@ -32,7 +34,7 @@ function App() {
                 </div>
               </div>
             </article>
-            <article class="group_process second">
+            <article className="group_process second">
               <h3>2. 번역 언어 선택 (복수 선택 가능)</h3>
               <div>
                 <div>
@@ -50,7 +52,7 @@ function App() {
               </div>
               <p>언어 추가 시 15% 할인</p>
             </article>
-            <article class="group_process third">
+            <article className="group_process third">
               <h3>3. 결제수단 등록하면 구독 완료</h3>
               <div>
                 <dl>
@@ -78,7 +80,8 @@ function App() {
               </div>
             </article>
           </div>
-          <div class="plan_submit">
+          <div className="plan_submit">
+            <h2 className="a11y">구독 진행</h2>
             <p>지금 1달 요금으로, 2달 이용 가능!</p>
             <button type="button">선택한 플랜으로 구독</button>
           </div>
