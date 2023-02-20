@@ -1,4 +1,6 @@
 import "./App.css";
+import PlanBox from "./components/PlanBox";
+import Radio from "./components/Radio";
 
 function App() {
   return (
@@ -12,47 +14,37 @@ function App() {
           </p>
           <div className="plan_process">
             <h2 className="a11y">구독 플랜 구성 순서</h2>
-            <article className="group_process first">
+            <PlanBox className="group_process first">
               <h3>1. 영상 자막 소스 선택</h3>
               <span className=""></span>
               <div>
-                <div>
-                  <label for="sourceVoice">음성</label>
-                  <input id="sourceVoice" name="source" type="radio" />
-                </div>
-                <div>
-                  <label for="sourceGraphic">그래픽</label>
-                  <input id="sourceGraphic" name="source" type="radio" />
-                </div>
-                <div>
-                  <label for="sourceVoiceAndGraphic">음성 + 그래픽</label>
-                  <input
-                    id="sourceVoiceAndGraphic"
-                    name="source"
-                    type="radio"
-                  />
-                </div>
+                <Radio id="sourceVoice" name="source" label="음성" />
+                <Radio id="sourceGraphic" name="source" label="그래픽" />
+                <Radio
+                  id="sourceVoiceAndGraphic"
+                  name="source"
+                  label="음성 + 그래픽"
+                />
               </div>
-            </article>
-            <article className="group_process second">
+            </PlanBox>
+            <PlanBox className="group_process second">
               <h3>2. 번역 언어 선택 (복수 선택 가능)</h3>
               <div>
-                <div>
-                  <label for="languageEn">한국어 → 영어</label>
-                  <input id="languageEn" name="language" type="radio" />
-                </div>
-                <div>
-                  <label for="languageJp">한국어 → 일본어</label>
-                  <input id="languageJp" name="language" type="radio" />
-                </div>
-                <div>
-                  <label for="languageCn">한국어 → 중국어</label>
-                  <input id="languageCn" name="language" type="radio" />
-                </div>
+                <Radio id="languageEn" name="language" label="한국어 → 영어" />
+                <Radio
+                  id="languageJp"
+                  name="language"
+                  label="한국어 → 일본어"
+                />
+                <Radio
+                  id="languageCn"
+                  name="language"
+                  label="한국어 → 중국어"
+                />
               </div>
               <p>언어 추가 시 15% 할인</p>
-            </article>
-            <article className="group_process third">
+            </PlanBox>
+            <PlanBox className="group_process third">
               <h3>3. 결제수단 등록하면 구독 완료</h3>
               <div>
                 <dl>
@@ -78,7 +70,7 @@ function App() {
                   </div>
                 </dl>
               </div>
-            </article>
+            </PlanBox>
           </div>
           <div className="plan_submit">
             <h2 className="a11y">구독 진행</h2>
