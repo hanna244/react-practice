@@ -14,62 +14,50 @@ function App() {
           </p>
           <div className="plan_process">
             <h2 className="a11y">구독 플랜 구성 순서</h2>
-            <PlanBox className="group_process first">
-              <h3>1. 영상 자막 소스 선택</h3>
-              <span className=""></span>
-              <div>
-                <Radio id="sourceVoice" name="source" label="음성" />
-                <Radio id="sourceGraphic" name="source" label="그래픽" />
-                <Radio
-                  id="sourceVoiceAndGraphic"
-                  name="source"
-                  label="음성 + 그래픽"
-                />
-              </div>
+            <PlanBox className="planBox first" title="1. 영상 자막 소스 선택">
+              <Radio id="sourceVoice" name="source" label="음성" />
+              <Radio id="sourceGraphic" name="source" label="그래픽" />
+              <Radio
+                id="sourceVoiceAndGraphic"
+                name="source"
+                label="음성 + 그래픽"
+              />
             </PlanBox>
-            <PlanBox className="group_process second">
-              <h3>2. 번역 언어 선택 (복수 선택 가능)</h3>
-              <div>
-                <Radio id="languageEn" name="language" label="한국어 → 영어" />
-                <Radio
-                  id="languageJp"
-                  name="language"
-                  label="한국어 → 일본어"
-                />
-                <Radio
-                  id="languageCn"
-                  name="language"
-                  label="한국어 → 중국어"
-                />
-              </div>
+            <PlanBox
+              className="planBox second"
+              title="2. 번역 언어 선택 (복수 선택 가능)"
+            >
+              <Radio id="languageEn" name="language" label="한국어 → 영어" />
+              <Radio id="languageJp" name="language" label="한국어 → 일본어" />
+              <Radio id="languageCn" name="language" label="한국어 → 중국어" />
               <p>언어 추가 시 15% 할인</p>
             </PlanBox>
-            <PlanBox className="group_process third">
-              <h3>3. 결제수단 등록하면 구독 완료</h3>
-              <div>
-                <dl>
-                  <div>
-                    <dt>총 주문 금액</dt>
-                    <dd>380,000원</dd>
-                  </div>
-                  <div>
-                    <dt>구독 특별 할인</dt>
-                    <dd>-30,000원</dd>
-                  </div>
-                  <div>
-                    <dt>추가 언어 할인</dt>
-                    <dd>-0원</dd>
-                  </div>
-                  <div>
-                    <dt>제목 설명 번역 무료</dt>
-                    <dd>추가 비용 없음</dd>
-                  </div>
-                  <div>
-                    <dt>월 정기 결제 금액</dt>
-                    <dd>350,000원</dd>
-                  </div>
-                </dl>
-              </div>
+            <PlanBox
+              className="planBox third"
+              title="3. 결제수단 등록하면 구독 완료"
+            >
+              <dl>
+                <div>
+                  <dt>총 주문 금액</dt>
+                  <dd>380,000원</dd>
+                </div>
+                <div>
+                  <dt>구독 특별 할인</dt>
+                  <dd>-30,000원</dd>
+                </div>
+                <div>
+                  <dt>추가 언어 할인</dt>
+                  <dd>-0원</dd>
+                </div>
+                <div>
+                  <dt>제목 설명 번역 무료</dt>
+                  <dd>추가 비용 없음</dd>
+                </div>
+                <div>
+                  <dt>월 정기 결제 금액</dt>
+                  <dd>350,000원</dd>
+                </div>
+              </dl>
             </PlanBox>
           </div>
           <div className="plan_submit">

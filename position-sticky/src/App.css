@@ -54,7 +54,7 @@ body {
   max-width: 335px;
 }
 
-.group_process {
+.planBox {
   background-color: rgb(239, 242, 247);
   padding: 40px;
   border-radius: 30px;
@@ -62,7 +62,7 @@ body {
   border: 2px solid rgb(211, 211, 231);
 }
 
-.group_process dl > div {
+.planBox dl > div {
   display: grid;
   grid-template-columns: auto auto;
   align-items: center;
@@ -72,4 +72,12 @@ body {
 
 .plan_submit {
   background-color: lightblue;
+}
+
+.title_planBox {
+  margin: 0;
+}
+
+.content_planBox {
+  padding: 10px;
 }
